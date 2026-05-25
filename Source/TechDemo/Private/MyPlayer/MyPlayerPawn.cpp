@@ -32,7 +32,7 @@ void AMyPlayerPawn::BeginPlay()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("IT WORKED"));
 	
 	//Setting the player's camera is the first camera in the CameraManager
-	CameraManagerClass->SetPlayerCamera(1);
+	CameraManagerClass->SetDefaultCam();
 	PC->SetViewTargetWithBlend(CameraManagerClass);
 }
 

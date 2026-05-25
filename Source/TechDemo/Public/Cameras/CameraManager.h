@@ -19,6 +19,8 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
+	int CurrentCamID = 0;
 
 public:	
 	// Called every frame
@@ -36,8 +38,11 @@ public:
 	TArray<UCameraComponent*> AllCameras;
 	
 	UFUNCTION()
-	void SetPlayerCamera(int CamID);
+	void SetPlayerCamera(FName LeftOrRight);
 	
 	UFUNCTION()
 	void SetAllCameraInactive();
+	
+	UFUNCTION()
+	void SetDefaultCam();
 };

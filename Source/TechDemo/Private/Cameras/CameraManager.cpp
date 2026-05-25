@@ -10,7 +10,7 @@ ACameraManager::ACameraManager()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	
-	//Setting up a RootComponent
+	//Setting up a Rootomponent
 	RootComponent = CreateDefaultSubobject<USceneComponent>("RootComponent");
 	
 	Camera1 = CreateDefaultSubobject<UCameraComponent>("Camera_1");
@@ -53,26 +53,39 @@ void ACameraManager::SetAllCameraInactive()
 	}
 }
 
-void ACameraManager::SetPlayerCamera(int CamID)
+void ACameraManager::SetDefaultCam()
 {
 	SetAllCameraInactive();
 	
-	//Activating cameras based on their ID
-	switch (CamID)
+	AllCameras[0]->SetActive(true);
+}
+
+void ACameraManager::SetPlayerCamera(FName LeftOrRight)
+{
+	SetAllCameraInactive();
+
+	if (LeftOrRight.IsEqual("Left"))
 	{
-	case 1:
-		Camera1->SetActive(true);
-		break;
-	case 2:
-		Camera2->SetActive(true);
-		break;
-	case 3:
-		Camera3->SetActive(true);
-		break;
-	case 4:
-		Camera4->SetActive(true);
-		break;
-	default:
-		break;
+		CurrentCamID--;
+		
+		if (CurrentCamID == 0)
+		{
+			CurrentCamID = 4;
+		}
+	}
+	
+	if (LeftOrRight.IsEqual("Right"))
+	{
+		CurrentCamID++;
+		
+		if (CurrentCamID == 4)
+		{
+			CurrentCamID = 0;
+		}
+	}
+	
+	for (int i = 0; i < AllCameras.Num(); i++)
+	{
+		AllCameras[CurrentCamID]->SetActive(true);
 	}
 }
