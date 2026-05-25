@@ -2,12 +2,17 @@
 
 
 #include "MyPlayer/MyPlayerPawn.h"
+#include "Cameras/CameraManager.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMyPlayerPawn::AMyPlayerPawn()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	PlayerCamera = CreateDefaultSubobject<UCameraComponent>("PlayerCamera");
+	RootComponent = PlayerCamera;
 
 }
 
@@ -16,6 +21,19 @@ void AMyPlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	CameraManagerClass = Cast<ACameraManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ACameraManager::StaticClass()));
+
+	if (!CameraManagerClass) return;
+	
+	AMyPlayerController* PC = Cast<AMyPlayerController>(GetWorld()->GetFirstPlayerController());
+	
+	if (!PC) return;
+	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("IT WORKED"));
+	
+	//Setting the player's camera is the first camera in the CameraManager
+	CameraManagerClass->SetPlayerCamera(1);
+	PC->SetViewTargetWithBlend(CameraManagerClass);
 }
 
 // Called every frame

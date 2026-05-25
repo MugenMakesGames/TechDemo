@@ -13,5 +13,4 @@ UCLASS()
 class TECHDEMO_API AMyPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
 };

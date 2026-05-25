@@ -23,7 +23,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* Camera1;
 	UPROPERTY(EditAnywhere)

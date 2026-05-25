@@ -9,6 +9,10 @@ ACameraManager::ACameraManager()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	
+	
+	//Setting up a RootComponent
+	RootComponent = CreateDefaultSubobject<USceneComponent>("RootComponent");
+	
 	Camera1 = CreateDefaultSubobject<UCameraComponent>("Camera_1");
 	Camera1->SetupAttachment(RootComponent);
 	

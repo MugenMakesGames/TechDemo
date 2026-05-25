@@ -3,8 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MyPlayerController.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Pawn.h"
 #include "MyPlayerPawn.generated.h"
+
+class ACameraManager;
 
 UCLASS()
 class TECHDEMO_API AMyPlayerPawn : public APawn
@@ -18,6 +22,12 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
+	UPROPERTY()
+	ACameraManager* CameraManagerClass;
+	
+	UPROPERTY()
+	AMyPlayerController* MyPlayerController;
 
 public:	
 	// Called every frame
@@ -25,5 +35,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
+	UPROPERTY(EditAnywhere)
+	UCameraComponent* PlayerCamera;
 
 };
