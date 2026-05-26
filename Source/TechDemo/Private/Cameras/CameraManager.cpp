@@ -66,6 +66,7 @@ void ACameraManager::SetPlayerCamera(FName LeftOrRight)
 
 	if (LeftOrRight.IsEqual("Left"))
 	{
+		//Making sure that the player can switch back to the start of the cam array using one button
 		if (CurrentCamID <= 0)
 		{
 			CurrentCamID = 3;
@@ -76,6 +77,7 @@ void ACameraManager::SetPlayerCamera(FName LeftOrRight)
 		}
 	}
 	
+	//Making sure that the player can switch back to the start of the cam array using one button
 	if (LeftOrRight.IsEqual("Right"))
 	{
 		if (CurrentCamID >= 3)
