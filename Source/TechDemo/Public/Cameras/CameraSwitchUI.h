@@ -4,9 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/Button.h"
 #include "CameraSwitchUI.generated.h"
 
 class ACameraManager;
+
 /**
  * 
  */
@@ -24,10 +26,10 @@ protected:
 
 public:
 	
-	UPROPERTY(EditAnywhere, meta = (bindwidget), BlueprintReadWrite)
+	UPROPERTY(meta = (Bindwidget), BlueprintReadWrite)
 	UButton* SwitchToLeftCamera;
 	
-	UPROPERTY(EditAnywhere, meta = (bindwidget), BlueprintReadWrite)
+	UPROPERTY(meta = (BindWidget), BlueprintReadWrite)
 	UButton* SwitchToRightCamera;
 	
 	UFUNCTION()

@@ -2,7 +2,6 @@
 
 
 #include "Cameras/CameraSwitchUI.h"
-
 #include "Cameras/CameraManager.h"
 #include "Components/Button.h"
 #include "Kismet/GameplayStatics.h"
@@ -14,8 +13,11 @@ void UCameraSwitchUI::NativeConstruct()
 	CameraManagerClass = Cast<ACameraManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ACameraManager::StaticClass()));
 	
 	//Binding all buttons to their OnClicked functions
-	SwitchToLeftCamera->OnClicked.AddUniqueDynamic(this, UCameraSwitchUI::OnSwitchToLeftCam);
+	if (!SwitchToLeftCamera) return;
+	if (!SwitchToRightCamera) return;
 	
+	SwitchToLeftCamera->OnClicked.AddDynamic(this, &UCameraSwitchUI::OnSwitchToLeftCam);
+	SwitchToRightCamera->OnClicked.AddDynamic(this, &UCameraSwitchUI::OnSwitchToRightCam);
 	
 }
 

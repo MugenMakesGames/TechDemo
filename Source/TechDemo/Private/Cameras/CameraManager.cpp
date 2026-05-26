@@ -66,21 +66,25 @@ void ACameraManager::SetPlayerCamera(FName LeftOrRight)
 
 	if (LeftOrRight.IsEqual("Left"))
 	{
-		CurrentCamID--;
-		
-		if (CurrentCamID == 0)
+		if (CurrentCamID <= 0)
 		{
-			CurrentCamID = 4;
+			CurrentCamID = 3;
+		}
+		else if (CurrentCamID > 0)
+		{
+			CurrentCamID--;
 		}
 	}
 	
 	if (LeftOrRight.IsEqual("Right"))
 	{
-		CurrentCamID++;
-		
-		if (CurrentCamID == 4)
+		if (CurrentCamID >= 3)
 		{
 			CurrentCamID = 0;
+		}
+		else if (CurrentCamID < 3)
+		{
+			CurrentCamID++;
 		}
 	}
 	
