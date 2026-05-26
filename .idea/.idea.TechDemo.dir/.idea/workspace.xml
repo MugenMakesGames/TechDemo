@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4b1766-be97-48ae-91b8-8ec2b8518d71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TechDemo.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechDemo.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/MyPlayer/BP_MyPlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/MyPlayer/BP_MyPlayerController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/TechDemo/Private/Cameras/CameraManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TechDemo/Private/Cameras/CameraManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/TechDemo/Private/Cameras/CameraSwitchUI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TechDemo/Private/Cameras/CameraSwitchUI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/TechDemo/Public/Cameras/CameraSwitchUI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TechDemo/Public/Cameras/CameraSwitchUI.h" afterDir="false" />
-    </list>
+    <list default="true" id="5d4b1766-be97-48ae-91b8-8ec2b8518d71" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
