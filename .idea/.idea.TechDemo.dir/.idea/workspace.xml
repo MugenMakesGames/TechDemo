@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4b1766-be97-48ae-91b8-8ec2b8518d71" name="Changes" comment="" />
+    <list default="true" id="5d4b1766-be97-48ae-91b8-8ec2b8518d71" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TechDemo.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechDemo.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Cameras/BP_CameraManager.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Cameras/BP_CameraManager.uasset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,6 +145,7 @@
       <workItem from="1779733428967" duration="270000" />
       <workItem from="1779733762664" duration="5056000" />
       <workItem from="1779791050641" duration="1387000" />
+      <workItem from="1780502595530" duration="2326000" />
     </task>
     <servers />
   </component>
